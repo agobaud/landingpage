@@ -1,0 +1,102 @@
+html, body, ul{
+	padding:0;
+	margin:0;
+	font-family: 'Lato', sans-serif;
+	font-size:16px;
+	height:100%;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+/*media queries*/
+@media all and (max-width: 724px){
+	.outline-button{
+		margin: 2em .5em 1em .5em;
+		color:red;
+	}
+}
+
+/*landing page*/
+
+.header-img{
+	width:100%;
+	height: 100%;
+	background: url('../img/hiking.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.header-content{
+	color:#ffffff;
+	text-align: center;
+ 	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.eyebrow{
+	font-size: 1.3em;
+	color:rgba(255,255,255,0.6);
+}
+
+.title-name{
+	text-transform: uppercase;
+	font-size: 3.75em;
+	margin: .4em auto .4em auto;
+}
+
+.intro-text{
+	line-height: 1.5em;
+	font-size: 1.3em;
+	color:rgba(255,255,255,0.6);
+}
+
+.intro-text a{
+	color:#fff;
+}
+.intro-text a:hover{
+	text-decoration: underline;
+}
+
+.outline-button{
+	margin: 3em 1em 4em 1em;
+	width: auto;
+	display: inline-block;
+}
+
+.outline-button a{
+	text-transform: uppercase;
+	border: 3px solid #646363;
+	font-size: 1.3em;
+	width: intrinsic;
+	padding: .7em 2em .7em 2em;
+	color: #000000;
+	transition-duration:.1s;
+}
+
+a.outline-anchor:hover{
+	color: #ffffff;
+	background-color: #646363;
+}
+
+#home-outline a{
+	color: #ffffff;
+	border: 3px solid #ffffff;
+	transition-duration:.15s;
+}
+
+#home-outline a:hover{
+	color:#000;
+	background-color: #ffffff;
+}
