@@ -5,10 +5,8 @@ project = [
 		["Project Vaus", "projectvaus.html", "img/vausbubble.png"],
 		["CorpSquare", "corpsquare.html", "img/corpsquarebubble.png"],
 		["Room for Good", "roomforgood.html", "img/roomforgoodbubble.png"],
-		// ["breathe.", "breathe.html", "img/breathebubble.png"],
 		["Clutter Capture", "clutturecapture.html", "img/cluttercapturebubble.png"],
 		["Smart Energy", "smartenergy.html", "img/smartenergybubble.png"],
-		//["MallGo.com", "mallgo.html", "img/mallgobubble.png"],
 	];
 
 
@@ -23,7 +21,7 @@ function createRandomProjects(){
 		}
 	}
 
-	for (var i = 0; i < 6; i++){
+	for (var i = 0; i < 3; i++){
 		var size = projectCopy.length;
 		var x = Math.floor(size*Math.random());	
 		$project = $("<div/>" , {
@@ -36,4 +34,10 @@ function createRandomProjects(){
 
 $(document).ready(function(){
 	createRandomProjects();
+
+	$('.grid-element').hover(function (){
+		$(this).fadeTo("slow", 0.5);
+	}, function(){
+		$(this).fadeTo("fast", 1);
+	});
 });

@@ -31,12 +31,13 @@ $(document).ready(function () {
 		}
 		if (page != 'index')
 		{
-			window.location = 'index.html#' + goTo + "-container";
+			window.location = 'index.html.' + goTo + "-container";
 		}
-		scrollToElement("#" + goTo + "-container");
+		scrollToElement("." + goTo + "-container");
 	})
 
 });
+
 
 
 
