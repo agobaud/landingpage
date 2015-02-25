@@ -421,7 +421,7 @@ a.outline-anchor:hover{
 
 #vausimages{
 	margin: 1em auto;
-	float:left;
+	display: inline-block;
 }
 
 #corpsquareheader{
@@ -506,7 +506,7 @@ a.outline-anchor:hover{
 
 /* About Me */
 
-.aboutme-container{
+#aboutme-container{
 	background-color: #E8EAEA;
 	background-image: url('../img/wild_flowers.png');
 	background-repeat: repeat;

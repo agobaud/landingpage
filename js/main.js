@@ -19,22 +19,44 @@ $(document).ready(function () {
 	// $(".header-img").width(width);
 
 	$('.chevron-wrapper').on('click', function(){
-		scrollToElement('.work-container');
+		scrollToElement('#work-container');
 	})
 
+	// $(document).on("click", "a.work", function(e){
+ //  		 e.stopPropagation();
+ //  		 e.preventDefault();
+
+ //   $('html, body').animate({
+ //      scrollTop: $(".work-container").offset().top
+ //  		 }, 1000);
+	// });
+
+	// $(document).on("click", "a.work", function(){
+	// 		scrollToElement("#work-container")
+	// });
+
 	$('.nav li a').on('click', function(){
-		goTo = $(this).attr('class');
-		href = window.location.href;
-		page = href.substring(href.lastIndexOf('/') +1, href.lastIndexOf('.html') );
-		if (goTo == "resume"){
-			return;
-		}
-		if (page != 'index')
-		{
-			window.location = 'index.html.' + goTo + "-container";
-		}
-		scrollToElement("." + goTo + "-container");
-	})
+        var goTo = $(this).attr('class');
+        var href = window.location.href;
+        
+        var page;
+        if (href.lastIndexOf(".html") == -1)
+            page = "index";
+        else
+            page = href.substring(href.lastIndexOf('/') +1, href.lastIndexOf('.html') );
+
+        if (goTo == "resume"){
+            return;
+        }
+        if (goTo == "aboutme"){
+            scrollToElement("#" + goTo + "-container");
+            return;
+        }
+        if (page != 'index') {
+            window.location = 'index.html#' + goTo + "-container";
+        }
+        else { scrollToElement("#" + goTo + "-container"); }
+    })
 
 });
 
